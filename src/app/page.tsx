@@ -10,15 +10,15 @@ export default function Root() {
       <section id="home" className="h-screen">
         <Hero />
       </section>
-      <section id="sobre" className="h-screen">
+      <section id="about" className="h-screen">
         <About />
       </section>
 
-      <section id="experiências" className="h-screen">
+      <section id="experiences" className="h-screen">
         <Experiences />
       </section>
 
-      <section id="habilidades" className="h-screen">
+      <section id="skills" className="h-screen">
         <Skills />
       </section>
     </div>

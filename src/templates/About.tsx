@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 export const About = () => {
   return (
     <div className="h-screen flex items-center justify-center">
-      <div className="flex gap-5">
+      <div className="flex gap-5 max-md:flex-col">
         <motion.div
           initial={{
             x: -200,
@@ -21,7 +21,7 @@ export const About = () => {
           className="flex items-center justify-center min-w-[35%]"
         >
           <Image
-            className="w-80 h-80 object-cover rounded-lg"
+            className="w-80 h-80 object-cover rounded-lg max-md:w-40 max-md:h-40"
             src={images.Me}
             alt=""
           />
@@ -39,7 +39,7 @@ export const About = () => {
           viewport={{ once: true }}
           className="flex flex-col gap-5 items-center justify-center"
         >
-          <h4 className="text-4xl font-semibold ">
+          <h4 className="text-4xl font-semibold text-center">
             Um{' '}
             <span className="underline decoration-[#b91c1c]/50 decoration-red-7">
               pouco

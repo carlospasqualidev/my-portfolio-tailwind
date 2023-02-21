@@ -3,12 +3,114 @@ import Image from 'next/image';
 import { svgs } from '../assets/index';
 import { SkillCircle, Typewriter } from '@/components';
 
+const iconsData = [
+  {
+    key: 1,
+    Icon: svgs.Js,
+    skillAvg: '89%',
+    animDelay: 0,
+  },
+  {
+    key: 2,
+    Icon: svgs.Ts,
+    skillAvg: '89%',
+    animDelay: 0.25,
+  },
+  {
+    key: 3,
+    Icon: svgs.Css,
+    skillAvg: '81%',
+    animDelay: 0.5,
+  },
+  {
+    key: 4,
+    Icon: svgs.Html,
+    skillAvg: '81%',
+    animDelay: 0.75,
+  },
+  {
+    key: 5,
+    Icon: svgs.Git,
+    skillAvg: '78%',
+    animDelay: 1,
+  },
+
+  {
+    key: 6,
+    Icon: svgs.Next,
+    skillAvg: '75%',
+    animDelay: 1.25,
+  },
+  {
+    key: 7,
+    Icon: svgs.Node,
+    skillAvg: '87%',
+    animDelay: 1.5,
+  },
+  {
+    key: 8,
+    Icon: svgs.Prisma,
+    skillAvg: '85%',
+    animDelay: 1.75,
+  },
+  {
+    key: 9,
+    Icon: svgs.Postgresql,
+    skillAvg: '75%',
+    animDelay: 2,
+  },
+  {
+    key: 10,
+    Icon: svgs.React,
+    skillAvg: '88%',
+    animDelay: 2.25,
+  },
+  {
+    key: 11,
+    Icon: svgs.ReactNative,
+    skillAvg: '77%',
+    animDelay: 2.5,
+  },
+  {
+    key: 12,
+    Icon: svgs.Tailwind,
+    skillAvg: '78%',
+    animDelay: 2.75,
+  },
+  {
+    key: 13,
+    Icon: svgs.StyledComponents,
+    skillAvg: '82%',
+    animDelay: 3,
+  },
+  {
+    key: 14,
+    Icon: svgs.Python,
+    skillAvg: '64%',
+    animDelay: 3.25,
+  },
+  {
+    key: 15,
+    Icon: svgs.Csharp,
+    skillAvg: '69%',
+    animDelay: 3.5,
+  },
+  {
+    key: 16,
+    Icon: svgs.Unity,
+    skillAvg: '59%',
+    animDelay: 3.75,
+  },
+];
+
+let animDelay = 0;
+
 export const Skills = () => {
   return (
-    <div className="h-screen flex items-center justify-center pt-16 gap-12">
-      <div className="w-1/4">
+    <div className="h-screen flex items-center justify-center pt-16 gap-12 flex-wra flex-col">
+      <div className="w-full flex h-20 justify-center max-md:w-full">
         <Typewriter
-          className="font-boid text-2xl"
+          className="font-boid text-3xl text-center"
           words={[
             'Descubra mais sobre minhas habilidades',
             'Flutue o mouse sobre os icones',
@@ -17,27 +119,15 @@ export const Skills = () => {
         />
       </div>
 
-      <div className="flex gap-6 flex-wrap w-1/2">
-        <SkillCircle Icon={svgs.Css} skillAvg="81%" />
-        <SkillCircle Icon={svgs.Html} animDelay={0.25} skillAvg="81%" />
-        <SkillCircle Icon={svgs.Git} animDelay={0.5} skillAvg="78%" />
-        <SkillCircle Icon={svgs.Js} animDelay={0.75} skillAvg="89%" />
-        <SkillCircle Icon={svgs.Ts} animDelay={1} skillAvg="89%" />
-        <SkillCircle Icon={svgs.Next} animDelay={1.25} skillAvg="75%" />
-        <SkillCircle Icon={svgs.Node} animDelay={1.5} skillAvg="87%" />
-        <SkillCircle Icon={svgs.Postgresql} animDelay={1.75} skillAvg="75%" />
-        <SkillCircle Icon={svgs.React} animDelay={2} skillAvg="88%" />
-        <SkillCircle Icon={svgs.ReactNative} animDelay={2.25} skillAvg="70%" />
-        <SkillCircle Icon={svgs.Tailwind} animDelay={2.5} skillAvg="75%" />
-        <SkillCircle Icon={svgs.Csharp} animDelay={2.75} skillAvg="69%" />
-        <SkillCircle Icon={svgs.Unity} animDelay={3} skillAvg="67%" />
-        <SkillCircle Icon={svgs.Python} animDelay={3.25} skillAvg="61%" />
-        <SkillCircle Icon={svgs.Prisma} animDelay={3.5} skillAvg="85%" />
-        <SkillCircle
-          Icon={svgs.StyledComponents}
-          animDelay={3.75}
-          skillAvg="82%"
-        />
+      <div className="flex gap-6  items-center justify-center flex-wrap w-1/2 max-md:w-full">
+        {iconsData.map((skill, i) => (
+          <SkillCircle
+            key={skill.key}
+            Icon={skill.Icon}
+            skillAvg={skill.skillAvg}
+            animDelay={skill.animDelay}
+          />
+        ))}
       </div>
     </div>
   );
