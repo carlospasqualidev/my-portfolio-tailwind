@@ -105,7 +105,7 @@ let animDelay = 0;
 
 export const Skills = () => {
   return (
-    <div className="h-screen flex items-center justify-center pt-16 gap-12 flex-wra flex-col">
+    <div className="h-screen flex items-center justify-center gap-12 flex-wra flex-col">
       <div className="w-full flex h-20 justify-center max-md:w-full">
         <Typewriter
           className="font-boid text-3xl text-center"

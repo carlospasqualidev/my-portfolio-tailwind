@@ -8,19 +8,20 @@ interface IProjectsCard {
   }[];
 }
 
+//first chilend margin 0 auto
 export const ProjectsCards = ({ projects }: IProjectsCard) => {
   return (
     <div
       className={
         projects.length > 3
-          ? 'flex items-center gap-12 overflow-auto pb-6'
+          ? 'flex items-center gap-12 overflow-x-auto pb-6  '
           : 'flex items-center justify-center gap-12 overflow-auto pb-6'
       }
     >
       {projects.map((project, i) => (
-        <article
+        <div
           key={project.title}
-          className="w-[30%] min-w-[30%] flex flex-col items-center text-center z-20"
+          className="min-w-[30%] flex flex-col items-center text-center max-mb:min-w-full"
         >
           <div>
             <Image
@@ -37,7 +38,7 @@ export const ProjectsCards = ({ projects }: IProjectsCard) => {
             </span>
           </h1>
           <p>{project.description}</p>
-        </article>
+        </div>
       ))}
     </div>
   );

@@ -42,9 +42,11 @@ const dataProjects = [
   },
 ];
 
+//arrumar para telas grandes
+
 export const Projects = () => {
   return (
-    <div className="h-screen w-full pt-24">
+    <div className="h-screen w-full flex justify-center items-center">
       <div className="w-full h-1/2 absolute bg-[#b91c1c]/20 -skew-y-12 right-[0px]" />
       <ProjectsCards projects={dataProjects} />
     </div>

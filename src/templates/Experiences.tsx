@@ -5,7 +5,7 @@ import { Card } from '@/components/Card';
 
 export const Experiences = () => {
   return (
-    <div className="h-screen flex flex-wrap items-center justify-center pt-16 gap-6 max-md:overflow-x-auto max-md:flex-col">
+    <div className="h-screen flex flex-wrap items-center justify-center gap-6 max-md:overflow-x-auto max-md:flex-col">
       <Card
         image={svgs.Ada}
         title="Desenvolvedor"

@@ -27,7 +27,7 @@ const data = [
   },
 ];
 
-export const Header = () => {
+export const Header = (children: any) => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   const [urlHash, setUrlHash] = useState('#home');
@@ -40,7 +40,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="flex  justify-center h-16 fixed w-full z-50 max-md:justify-start">
+    <header className="flex  justify-center h-16 sticky top-0 w-full z-50 max-md:justify-start">
       <div
         className={
           mobileMenuIsOpen
@@ -72,7 +72,7 @@ export const Header = () => {
             className={
               data.href === urlHash
                 ? 'scale-125 opacity-100 transition-all duration-200 ease-in text-sm uppercase text-white  tracking-[6px] font-bold'
-                : 'hover:scale-125 transition-all duration-200 ease-in opacity-75 text-sm uppercase text-white  tracking-[6px]'
+                : 'hover:scale-125 transition-all duration-200 ease-in opacity-75 text-sm uppercase text-white tracking-[6px]'
             }
           >
             <a href={data.href}>{data.label}</a>
