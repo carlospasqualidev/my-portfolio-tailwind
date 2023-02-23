@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 import { svgs } from '../assets/index';
 import { SkillCircle, Typewriter } from '@/components';
 

@@ -1,12 +1,14 @@
-import Image from 'next/image';
+'use client';
+
 import { Inter } from '@next/font/google';
-import { About, Hero, Experiences, Skills } from '@/templates';
+import { About, Hero, Experiences, Skills, Projects } from '@/templates';
+import { useEffect, useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Root() {
   return (
-    <div className="h-full">
+    <>
       <section id="home" className="h-screen">
         <Hero />
       </section>
@@ -21,6 +23,10 @@ export default function Root() {
       <section id="skills" className="h-screen">
         <Skills />
       </section>
-    </div>
+
+      <section id="projects" className="h-screen">
+        <Projects />
+      </section>
+    </>
   );
 }

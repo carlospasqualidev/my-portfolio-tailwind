@@ -5,7 +5,30 @@
 
 
 *{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
 }
 
+/* width */
+::-webkit-scrollbar {
+    height: 10px;
+  }
+  
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0.1;
+  border-radius: 10px;
 
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #b91c1c9c;
+  border-radius: 10px;
+
+  }
+  
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #b91c1ccb;
+  }

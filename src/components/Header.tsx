@@ -1,15 +1,8 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { RedirectButton } from './RedirectButton';
-import {
-  FaGithub,
-  FaLinkedinIn,
-  FaWhatsapp,
-  FaEnvelope,
-  FaTimes,
-  FaBars,
-} from 'react-icons/fa';
+import { useState } from 'react';
+
+import { FaTimes, FaBars } from 'react-icons/fa';
 
 const data = [
   {
@@ -28,22 +21,26 @@ const data = [
     label: 'Habilidades',
     href: '#skills',
   },
+  {
+    label: 'Projetos',
+    href: '#projects',
+  },
 ];
 
 export const Header = () => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   const [urlHash, setUrlHash] = useState('#home');
-  useEffect(() => {
-    setUrlHash(window.location.hash);
-  }, []);
+  // useEffect(() => {
+  //   setUrlHash(window.location.hash);
+  // }, [urlHash]);
 
   const toggleMobileMenu = () => {
     setMobileMenuIsOpen((prevState) => !prevState);
   };
 
   return (
-    <header className="flex justify-between h-16 fixed w-full z-50">
+    <header className="flex  justify-center h-16 fixed w-full z-50 max-md:justify-start">
       <div
         className={
           mobileMenuIsOpen
@@ -60,18 +57,6 @@ export const Header = () => {
       >
         {mobileMenuIsOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
       </button>
-
-      <div className="w-[20%] flex items-center pl-6 z-50 max-md:hidden">
-        <RedirectButton
-          Icon={FaGithub}
-          href="https://github.com/carlospasqualidev"
-        />
-
-        <RedirectButton
-          Icon={FaLinkedinIn}
-          href="https://www.linkedin.com/in/carlos-pasquali-48aa49207/?originalSubdomain=br"
-        />
-      </div>
 
       <ul
         className={
@@ -94,17 +79,6 @@ export const Header = () => {
           </li>
         ))}
       </ul>
-
-      <div className="w-[20%] flex justify-end items-center pr-6 z-50 max-md:hidden">
-        <RedirectButton
-          Icon={FaWhatsapp}
-          href="https://api.whatsapp.com/send/?phone=05148998223154&text&type=phone_number&app_absent=0"
-        />
-        <RedirectButton
-          Icon={FaEnvelope}
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=email@carlos.pasquali.dev@gmail.com"
-        />
-      </div>
     </header>
   );
 };
