@@ -8,7 +8,7 @@ import { Typewriter } from './Typewriter';
 export const BackgroundCircles = () => {
   return (
     <motion.div
-      className="flex items-center justify-center h-[80%] absolute w-[100%] -ml-6 mt-[102px] "
+      className="flex items-center justify-center h-[80%] absolute w-[100%] -ml-6 mt-[102px]"
       initial={{
         opacity: 0,
       }}

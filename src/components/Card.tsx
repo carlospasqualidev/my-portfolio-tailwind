@@ -25,7 +25,7 @@ export const Card = ({ image, title, subTitle, dateTime, summary }: ICard) => {
       }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="flex flex-col rounded-lg items-center bg-[#292929] p-6 min-w-[30%] hover:scale-105 transition-all duration-200 ease-in"
+      className="flex flex-col rounded-lg items-center bg-[#292929] p-6 min-w-[30%]  hover:scale-105 transition-all duration-200 ease-in"
     >
       <motion.div
         initial={{

@@ -27,7 +27,7 @@ const data = [
   },
 ];
 
-export const Header = (children: any) => {
+export const Header = () => {
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
 
   const [urlHash, setUrlHash] = useState('#home');

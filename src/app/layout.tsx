@@ -9,9 +9,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head />
-      <body className="bg-[rgb(36,36,36)] text-white overflow-hidden">
+      <body className="bg-[rgb(36,36,36)] text-white">
         <Header />
-        <div className="h-full px-6">{children}</div>
+        <div className="h-full px-6 overflow-hidden">{children}</div>
       </body>
     </html>
   );

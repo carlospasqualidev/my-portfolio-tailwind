@@ -25,7 +25,7 @@ export const SkillCircle = ({
       }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className=" bg-[#292929] rounded-full h-[68px] w-[68px] flex items-center justify-center hover:scale-110 transition-all duration-200 ease-in"
+      className=" bg-[#292929] rounded-full h-[68px] w-[68px] max-md:h-[58px] max-md:w-[58px] flex items-center justify-center hover:scale-110 transition-all duration-200 ease-in"
     >
       <div className="flex flex-col items-center cursor-pointer justify-center  opacity-0 absolute bg-black rounded-full z-20  h-[68px] w-[68px] transition-all duration-200 ease-in hover:opacity-80">
         <p>{skillAvg}</p>

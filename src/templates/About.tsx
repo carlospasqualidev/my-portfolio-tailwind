@@ -39,7 +39,7 @@ export const About = () => {
           viewport={{ once: true }}
           className="flex flex-col gap-5 items-center justify-center"
         >
-          <h4 className="text-4xl font-semibold text-center">
+          <h4 className="text-3xl font-semibold text-center max-md:text-2xl">
             Um{' '}
             <span className="underline decoration-[#b91c1c]/50 decoration-red-7">
               pouco

@@ -2,7 +2,6 @@
 
 import { Inter } from '@next/font/google';
 import { About, Hero, Experiences, Skills, Projects } from '@/templates';
-import { useEffect, useState } from 'react';
 
 const inter = Inter({ subsets: ['latin'] });
 
