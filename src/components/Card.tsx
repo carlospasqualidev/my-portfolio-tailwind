@@ -6,6 +6,7 @@ interface ICard {
   image: any;
   title: string;
   subTitle: string;
+  icons: { Icon: any }[];
   dateTime: {
     startDate: string;
     endDate: string;
@@ -13,7 +14,14 @@ interface ICard {
   summary: string[];
 }
 
-export const Card = ({ image, title, subTitle, dateTime, summary }: ICard) => {
+export const Card = ({
+  image,
+  title,
+  icons,
+  subTitle,
+  dateTime,
+  summary,
+}: ICard) => {
   return (
     <motion.article
       initial={{
@@ -46,24 +54,9 @@ export const Card = ({ image, title, subTitle, dateTime, summary }: ICard) => {
         <h4 className="text-4xl font-light max-md:text-3xl">{title}</h4>
         <p className="font-bold text-2xl mt-1 max-md:text-xl">{subTitle}</p>
         <div className="flex space-x-2 my-2">
-          <Image
-            src={images.Me}
-            style={{ objectFit: 'cover', borderRadius: '100%' }}
-            alt=""
-            className="h-10 w-10 roudend-full"
-          />
-          <Image
-            src={images.Me}
-            style={{ objectFit: 'cover', borderRadius: '100%' }}
-            alt=""
-            className="h-10 w-10 roudend-full"
-          />
-          <Image
-            src={images.Me}
-            style={{ objectFit: 'cover', borderRadius: '100%' }}
-            alt=""
-            className="h-10 w-10 roudend-full"
-          />
+          {icons.map((icon) => (
+            <icon.Icon size={24} key={icon} />
+          ))}
         </div>
 
         <p className="uppercase py-5 text-gray-300">
