@@ -47,7 +47,7 @@ const projectsData = [
 export const Projects = () => {
   return (
     <div className="h-screen w-full flex justify-center items-center pt-16">
-      <div className="w-full h-1/2 absolute bg-[#b91c1c]/20 -skew-y-12 right-[0px]" />
+      <div className="w-full h-1/2 absolute bg-[#2dd4bf]/20 -skew-y-12 right-[0px]" />
       <div className="flex overflow-x-auto gap-6 pb-6">
         {projectsData.map((project, i) => (
           <ProjectCard

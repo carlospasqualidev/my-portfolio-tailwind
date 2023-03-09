@@ -17,7 +17,7 @@ export const Typewriter = ({ words, className }: ITypeWriter) => {
   return (
     <h1 className={className}>
       <span>{text}</span>
-      <Cursor cursorColor="#b91c1c" />
+      <Cursor cursorColor="#2dd4bf" />
     </h1>
   );
 };

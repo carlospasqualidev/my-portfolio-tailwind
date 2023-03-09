@@ -26,7 +26,7 @@ export const ProjectCard = ({
 
       <h1 className="mb-4 text-2xl font-bold max-md:text-xl">
         Projeto {projectNumber} de {totalProjectNumber}:{' '}
-        <span className="underline decoration-[#b91c1c]/50 decoration-red-7">
+        <span className="underline decoration-[#2dd4bf]/50 decoration-red-7">
           {title}
         </span>
       </h1>

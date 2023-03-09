@@ -1,9 +1,9 @@
 'use client';
 
-import { Inter } from '@next/font/google';
+// import { Inter } from '@next/font/google';
 import { About, Hero, Experiences, Skills, Projects } from '@/templates';
 
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 
 export default function Root() {
   return (
@@ -11,7 +11,7 @@ export default function Root() {
       <section id="home" className="h-screen">
         <Hero />
       </section>
-      <section id="about" className="h-screen">
+      <section id="about" className="h-screen px-10">
         <About />
       </section>
 
