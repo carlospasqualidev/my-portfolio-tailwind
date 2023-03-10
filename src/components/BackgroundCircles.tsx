@@ -57,13 +57,13 @@ export const BackgroundCircles = () => {
           delay: 3.5,
           duration: 1.5,
         }}
-        className="absolute mt-72 ml-3 flex flex-col items-center justify-center z-20"
+        className="absolute mt-[25%] ml-3 gap-5 flex flex-col items-center justify-center z-20"
       >
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[12px]">
+        <h2 className="text-xl uppercase tracking-[12px] mt-[20%]font-bold max-md:text-sm max-md:mt-[30%]">
           Computer Engineer
         </h2>
         <Typewriter
-          className="font-bold"
+          className="font-bold text-lg"
           words={[
             'Olá, Me chamo Carlos Pasquali :)',
             '<>Desenvolvedor Full Stack Junior</>',

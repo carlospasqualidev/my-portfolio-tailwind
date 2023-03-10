@@ -17,14 +17,20 @@ import Unity from './svgs/unity.svg';
 import Python from './svgs/python.svg';
 import ReactNative from './svgs/react-native.svg';
 import StyledComponents from './svgs/styled-components.svg';
+import BackgroundParticles from './svgs/background.svg';
 
 //IMAGES
 
 import Me from './me.jpeg';
+import Me2 from './me_2.png';
+import MePc from './me_pc.jpg';
+
 import Satc from './satc.jpeg';
 
 export const images = {
   Me,
+  Me2,
+  MePc,
   Satc,
 };
 
@@ -47,4 +53,5 @@ export const svgs = {
   Python,
   StyledComponents,
   ReactNative,
+  BackgroundParticles,
 };

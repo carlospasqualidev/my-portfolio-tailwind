@@ -9,7 +9,7 @@ import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
 
 export const About = () => {
   return (
-    <div className="h-screen flex items-center justify-center gap-20">
+    <div className="h-screen flex items-center justify-center gap-20 max-md:flex-col max-md:gap-5">
       <motion.div
         initial={{
           x: -200,
@@ -20,11 +20,11 @@ export const About = () => {
         }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        className="flex flex-col gap-5 pt-12"
+        className="flex flex-col gap-5 pt-12 max-md:pt-24"
       >
         <Image
-          className="object-cover rounded-lg h-80 w-80"
-          src={images.Me}
+          className="object-cover rounded-lg h-80 w-80 max-md:w-52 max-md:h-52"
+          src={images.Me2}
           alt=""
         />
 
@@ -54,7 +54,7 @@ export const About = () => {
         }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="max-w-[50%] flex flex-col items-center justify-center gap-5"
+        className="max-w-[50%] flex flex-col items-center justify-center gap-5 max-md:max-w-[100%]  "
       >
         <h4 className="text-3xl font-semibold text-center max-md:text-2xl">
           Um{' '}

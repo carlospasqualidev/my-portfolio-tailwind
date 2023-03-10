@@ -1,5 +1,6 @@
 import { svgs } from '../assets/index';
 import { SkillCircle, Typewriter } from '@/components';
+import Image from 'next/image';
 
 const iconsData = [
   {
@@ -106,15 +107,14 @@ export const Skills = () => {
     <div className="h-screen flex items-center justify-center gap-12 flex-wra flex-col">
       <div className="w-full flex h-20 justify-center max-md:w-full max-md:h-fit">
         <Typewriter
-          className="font-boid text-3xl text-center max-md:text-2xl"
+          className="font-boid text-3xl text-center max-md:text-2xl z-20"
           words={[
             'Descubra mais sobre minhas habilidades',
-            'Flutue o mouse sobre os icones',
+            'interaja com os icones',
             'viu?, não foi tão difícil...',
           ]}
         />
       </div>
-
       <div className="flex gap-6  items-center justify-center flex-wrap w-1/2 max-md:w-full">
         {iconsData.map((skill, i) => (
           <SkillCircle

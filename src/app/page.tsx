@@ -11,19 +11,19 @@ export default function Root() {
       <section id="home" className="h-screen">
         <Hero />
       </section>
-      <section id="about" className="h-screen px-10">
+      <section id="about" className="h-screen px-10 max-md:px-5">
         <About />
       </section>
 
-      <section id="experiences" className="h-screen">
+      <section id="experiences" className="h-screen px-10 max-md:px-5">
         <Experiences />
       </section>
 
-      <section id="skills" className="h-screen">
+      <section id="skills" className="h-screen px-10 max-md:px-5">
         <Skills />
       </section>
 
-      <section id="projects" className="h-screen">
+      <section id="projects" className="h-screen px-10 max-md:px-5">
         <Projects />
       </section>
     </>

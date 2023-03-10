@@ -7,7 +7,7 @@
 }
 
 body{
-  background-color: #333333;
+  background-color: #111111;
   color:#FFFFFF
 }
 
@@ -18,7 +18,7 @@ body{
    
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.8);
+  background: #000000cc;
   border-radius: 10px;
 
 }
@@ -34,3 +34,5 @@ body{
 ::-webkit-scrollbar-thumb:hover {
     background: #2dd4bf;
   }
+
+  
