@@ -48,8 +48,8 @@ export function Navbar() {
               onClick={() => setUrlHash(data.href)}
               key={data.href}
             >
-              <a className="md:flex max-sm:hidden" href={data.href}>
-                {<data.Icon size={48} />}
+              <a className="md:flex max-md:hidden" href={data.href}>
+                {<data.Icon size={38} />}
               </a>
 
               <a className="md:hidden sm:flex" href={data.href}>

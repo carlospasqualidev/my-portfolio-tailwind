@@ -17,7 +17,7 @@ export const ProjectCard = ({
   totalProjectNumber,
 }: IProjectCard) => {
   return (
-    <div className="min-w-[32%] max-md:min-w-[100%] flex flex-col items-center text-center">
+    <div className="min-w-[32%] max-md:min-w-[100%] flex flex-col items-center text-center snap-center">
       <Image
         src={image}
         alt=""
@@ -26,9 +26,7 @@ export const ProjectCard = ({
 
       <h1 className="mb-4 text-2xl font-bold max-md:text-xl">
         Projeto {projectNumber} de {totalProjectNumber}:{' '}
-        <span className="underline decoration-[#2dd4bf]/50 decoration-red-7">
-          {title}
-        </span>
+        <span className="underline decoration-[#2dd4bf]/50">{title}</span>
       </h1>
       <p>{description}</p>
     </div>
