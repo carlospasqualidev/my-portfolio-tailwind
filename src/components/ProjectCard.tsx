@@ -21,10 +21,10 @@ export const ProjectCard = ({
       <Image
         src={image}
         alt=""
-        className="w-32 h-32 bg-cover rounded-2xl mb-6 max-md:h-24 max-md:w-24"
+        className="w-24 h-24 bg-cover rounded-2xl mb-4 max-md:h-24 max-md:w-24"
       />
 
-      <h1 className="mb-4 text-2xl font-bold max-md:text-xl">
+      <h1 className="mb-2 text-2xl font-bold max-md:text-xl">
         Projeto {projectNumber} de {totalProjectNumber}:{' '}
         <span className="underline decoration-[#2dd4bf]/50">{title}</span>
       </h1>

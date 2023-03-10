@@ -33,7 +33,8 @@ export const Card = ({
       }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="flex flex-col rounded-lg items-center bg-black bg-opacity-80 p-6 min-w-[30%]  hover:scale-105 transition-all duration-200 ease-in"
+      // className="flex flex-col rounded-lg items-center bg-black bg-opacity-80 p-6 min-w-[30%]  hover:scale-125 transition-all duration-200 ease-in snap-center max-md:bg-red-500"
+      className="snap-center flex flex-col items-center rounded-lg p-6 bg-black bg-opacity-80 min-w-[30%] relative  max-sm:min-w-[100%] max-md:min-w-[50%]"
     >
       <motion.div
         initial={{
@@ -54,12 +55,26 @@ export const Card = ({
         <h4 className="text-4xl font-light max-md:text-3xl">{title}</h4>
         <p className="font-bold text-2xl mt-1 max-md:text-xl">{subTitle}</p>
         <div className="flex space-x-2 my-2">
-          {icons.map((icon) => (
-            <icon.Icon size={24} key={icon} />
+          {icons.map((icon, i) => (
+            <motion.div
+              key={icon.Icon}
+              initial={{
+                opacity: 0,
+                y: -50,
+              }}
+              transition={{
+                duration: 1,
+                delay: 1 + (0.7 + i / 2),
+              }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              <icon.Icon size={24} key={icon} />
+            </motion.div>
           ))}
         </div>
 
-        <p className="uppercase py-5 text-gray-300">
+        <p className="uppercase py-5">
           {`${dateTime.startDate} - ${dateTime.endDate}`}
         </p>
 
