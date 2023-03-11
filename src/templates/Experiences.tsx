@@ -1,7 +1,7 @@
 'use client';
 
 import { images, svgs } from '@/assets';
-import { Card } from '@/components/Card';
+import { Card } from '@/components';
 
 import {
   FaDev,
@@ -10,6 +10,9 @@ import {
   FaPython,
   FaLaptopCode,
   FaUserGraduate,
+  FaMedal,
+  FaSkull,
+  FaUsers,
 } from 'react-icons/fa';
 
 const experiencesData = [
@@ -27,7 +30,7 @@ const experiencesData = [
   {
     image: images.Satc,
     title: 'Prof. temporário',
-    subtTitle: 'Satc - programando a vida',
+    subtTitle: 'Satc - prog. a vida',
     dateTime: {
       startDate: '01/04/2021',
       endDate: '01/10/2021',
@@ -40,56 +43,22 @@ const experiencesData = [
     ],
   },
   {
-    image: images.Satc,
-    title: 'Prof. temporário',
-    subtTitle: 'Satc - programando a vida',
+    image: images.Eb,
+    title: 'Soldado',
+    subtTitle: 'Exécerito Brasileiro',
     dateTime: {
-      startDate: '01/04/2021',
-      endDate: '01/10/2021',
+      startDate: '01/03/2018',
+      endDate: '01/03/2019',
     },
-    summary: ['Algoritmo', 'Python', 'Visual G'],
-    icons: [
-      { Icon: FaPython },
-      { Icon: FaLaptopCode },
-      { Icon: FaUserGraduate },
-    ],
-  },
-  {
-    image: images.Satc,
-    title: 'Prof. temporário',
-    subtTitle: 'Satc - programando a vida',
-    dateTime: {
-      startDate: '01/04/2021',
-      endDate: '01/10/2021',
-    },
-    summary: ['Algoritmo', 'Python', 'Visual G'],
-    icons: [
-      { Icon: FaPython },
-      { Icon: FaLaptopCode },
-      { Icon: FaUserGraduate },
-    ],
-  },
-  {
-    image: images.Satc,
-    title: 'Prof. temporário',
-    subtTitle: 'Satc - programando a vida',
-    dateTime: {
-      startDate: '01/04/2021',
-      endDate: '01/10/2021',
-    },
-    summary: ['Algoritmo', 'Python', 'Visual G'],
-    icons: [
-      { Icon: FaPython },
-      { Icon: FaLaptopCode },
-      { Icon: FaUserGraduate },
-    ],
+    summary: ['Honra ao mérito', 'Artilheiro', 'Espírito de corpo'],
+    icons: [{ Icon: FaMedal }, { Icon: FaSkull }, { Icon: FaUsers }],
   },
 ];
 
 export const Experiences = () => {
   return (
     <div className="h-screen flex items-center justify-center">
-      <div className="flex gap-10 snap-x snap-mandatory overflow-x-auto p-10 max-md:p-5">
+      <div className="flex gap-10 overflow-x-auto p-10 max-md:p-5 ">
         {experiencesData.map((experience) => (
           <Card
             key={experience.title}

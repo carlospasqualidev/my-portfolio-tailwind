@@ -26,15 +26,14 @@ export const Card = ({
     <motion.article
       initial={{
         opacity: 0,
-        y: -100,
+        x: -100,
       }}
       transition={{
         duration: 1,
       }}
-      whileInView={{ opacity: 1, y: 0 }}
+      whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      // className="flex flex-col rounded-lg items-center bg-black bg-opacity-80 p-6 min-w-[30%]  hover:scale-125 transition-all duration-200 ease-in snap-center max-md:bg-red-500"
-      className="snap-center flex flex-col items-center rounded-lg p-6 bg-black bg-opacity-80 min-w-[30%] relative  max-sm:min-w-[100%] max-md:min-w-[50%]"
+      className="flex flex-col items-center justify-center rounded-lg p-6 bg-black bg-opacity-80 min-w-[350px] relative  max-sm:min-w-[100%] max-md:min-w-[50%]"
     >
       <motion.div
         initial={{

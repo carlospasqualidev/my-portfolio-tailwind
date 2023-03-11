@@ -21,17 +21,18 @@ import BackgroundParticles from './svgs/background.svg';
 
 //IMAGES
 
-import Me from './me.jpeg';
-import Me2 from './me_2.png';
-import MePc from './me_pc.jpg';
-
-import Satc from './satc.jpeg';
+import Me from './images/me.jpeg';
+import Me2 from './images/me_2.png';
+import MePc from './images/me_pc.jpg';
+import Eb from './images/eb.jpg';
+import Satc from './images/satc.jpeg';
 
 export const images = {
   Me,
   Me2,
   MePc,
   Satc,
+  Eb,
 };
 
 export const svgs = {

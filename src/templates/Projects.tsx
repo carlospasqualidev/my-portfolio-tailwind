@@ -47,7 +47,7 @@ const projectsData = [
 export const Projects = () => {
   return (
     <div className="h-screen flex justify-center items-center">
-      <div className="flex overflow-x-scroll pb-5 gap-10 snap-x snap-mandatory">
+      <div className="flex overflow-x-scroll pb-5 gap-10">
         {projectsData.map((project, i) => (
           <ProjectCard
             key={project.title}
