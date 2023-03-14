@@ -109,8 +109,7 @@ export const Skills = () => {
         className="font-boid text-3xl text-center max-md:text-2xl z-20"
         words={[
           'Descubra mais sobre minhas habilidades',
-          'interaja com os icones',
-          'viu?, não foi tão difícil...',
+          'Interaja com os icones',
         ]}
       />
 

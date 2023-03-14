@@ -64,7 +64,7 @@ export const About = () => {
           sobre mim
         </h4>
 
-        <p>
+        <p className="text-center">
           Acadêmico de Engenharia da Computação na UNISATC, desenvolvedor Web
           Full Stack na Ada Lovelace Software House. Possuo conhecimento em
           Javascript, Typescript e nos frameworks ReactJS, Nextjs, Nodejs,
