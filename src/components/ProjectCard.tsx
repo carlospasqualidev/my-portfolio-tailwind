@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 interface IProjectCard {
-  image: any;
+  Icon: any;
   title: string;
   description: string;
   projectNumber: number;
@@ -11,7 +11,7 @@ interface IProjectCard {
 
 //first chilend margin 0 auto
 export const ProjectCard = ({
-  image,
+  Icon,
   title,
   description,
   projectNumber,
@@ -28,25 +28,20 @@ export const ProjectCard = ({
       }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      className="min-w-[32%] max-md:min-w-[100%] flex flex-col items-center text-center"
+      className="min-w-[32%] max-md:min-w-[100%] flex flex-col items-center text-center gap-1"
     >
       <motion.div
         initial={{
           opacity: 0,
           y: -100,
         }}
+        animate={{ opacity: 100, y: 0 }}
         transition={{
           duration: 1,
           delay: 1,
         }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
       >
-        <Image
-          src={image}
-          alt=""
-          className="w-24 h-24 bg-cover rounded-2xl mb-4 max-md:h-24 max-md:w-24"
-        />
+        <Icon size={80} />
       </motion.div>
 
       <h1 className="mb-2 text-2xl font-bold max-md:text-xl">

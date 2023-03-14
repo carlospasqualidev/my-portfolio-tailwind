@@ -5,7 +5,7 @@ import { images } from '@/assets';
 import { motion } from 'framer-motion';
 import { RedirectButton } from '@/components';
 
-import { FaGithub, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 
 export const About = () => {
   return (
@@ -65,14 +65,13 @@ export const About = () => {
         </h4>
 
         <p>
-          Acadêmico de Engenharia da Computação na UNISATC. Desenvolvedor Web
-          Full Stack na Ada Ada Lovelace Software House, com conhecimento em
-          Javascript, Typescript e nos frameworks ReactJS, Styled Components,
-          Nodejs, Prisma e Sequelize, experiência em modelagem de banco de dados
-          e SQL utilizando postgresSQL. Atuou também, como professor no projeto
-          Programando a Vida. Apaixonado pela programação, busca excelência no
-          que faz, é proativo, gosta do compartilhamento e da troca de
-          conhecimento.
+          Acadêmico de Engenharia da Computação na UNISATC, desenvolvedor Web
+          Full Stack na Ada Lovelace Software House. Possuo conhecimento em
+          Javascript, Typescript e nos frameworks ReactJS, Nextjs, Nodejs,
+          Prisma e Sequelize. Experiência na modelagem de banco de dados e SQL
+          utilizando PostgresSQL. Atuei como professor no projeto Programando a
+          Vida. Apaixonado pela programação, busco a excelência em tudo o que
+          faço, sou proativo e gosto de compartilhar meu conhecimento.
         </p>
       </motion.div>
     </div>

@@ -18,6 +18,7 @@ import Python from './svgs/python.svg';
 import ReactNative from './svgs/react-native.svg';
 import StyledComponents from './svgs/styled-components.svg';
 import BackgroundParticles from './svgs/background.svg';
+import Backend from './svgs/backend.svg';
 
 //IMAGES
 
@@ -26,6 +27,7 @@ import Me2 from './images/me_2.png';
 import MePc from './images/me_pc.jpg';
 import Eb from './images/eb.jpg';
 import Satc from './images/satc.jpeg';
+import Anonimous from './images/anonimous.jpg';
 
 export const images = {
   Me,
@@ -33,6 +35,7 @@ export const images = {
   MePc,
   Satc,
   Eb,
+  Anonimous,
 };
 
 export const svgs = {
@@ -55,4 +58,5 @@ export const svgs = {
   StyledComponents,
   ReactNative,
   BackgroundParticles,
+  Backend,
 };

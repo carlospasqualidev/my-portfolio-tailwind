@@ -1,7 +1,7 @@
 'use client';
 
 import { images, svgs } from '@/assets';
-import { Card } from '@/components';
+import { ExperiencesCard } from '@/components';
 
 import {
   FaDev,
@@ -45,7 +45,7 @@ const experiencesData = [
   {
     image: images.Eb,
     title: 'Soldado',
-    subtTitle: 'Exécerito Brasileiro',
+    subtTitle: 'Exército Brasileiro',
     dateTime: {
       startDate: '01/03/2018',
       endDate: '01/03/2019',
@@ -58,9 +58,9 @@ const experiencesData = [
 export const Experiences = () => {
   return (
     <div className="h-screen flex items-center justify-center">
-      <div className="flex gap-10 overflow-x-auto p-10 max-md:p-5 ">
+      <div className="flex gap-10 overflow-x-auto p-10 max-md:p-5">
         {experiencesData.map((experience) => (
-          <Card
+          <ExperiencesCard
             key={experience.title}
             image={experience.image}
             title={experience.title}

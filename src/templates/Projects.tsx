@@ -1,44 +1,39 @@
 'use client';
 
-import { images } from '@/assets';
 import { ProjectCard } from '@/components';
+
+import { FaUserSecret, FaServer } from 'react-icons/fa';
 
 const projectsData = [
   {
-    Image: images.Satc,
-    title: 'Netflix Clone 1',
+    Icon: FaServer,
+    title: 'Back-end - modelo',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      ' Desenvolvi este projeto para servir como modelo base para qualquer tipo de projeto, contendo programação funcional, documentação Swagger, Express para rotas, configurações de Cors, arquitetura modular, funções para lidar com datas, handlers de email, handler de erro, funções para lidar com tokens, lógica de autenticação, pronta, uploader de arquivos configurado e um esquema Prisma com usuário e permissões extremamente modulares.',
   },
   {
-    Image: images.Satc,
-    title: 'Netflix Clone 2',
+    Icon: FaUserSecret,
+    title: 'Anônimo',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      'Uma tecnologia que busca acelerar e maximizar os resultados entre Equipes/Times e Squads, garantindo a satisfação e o bem-estar de todos. Um software que possibilita a interação e a confiança, gerando consciência de comportamentos e hábitos coletivos. Seu principal objetivo é oferecer uma área de gestão de pessoas e equipes, com feedbacks, comentários e feedforwards.',
   },
   {
-    Image: images.Satc,
-    title: 'Netflix Clone 3 ',
+    Icon: FaUserSecret,
+    title: 'Anônimo',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      'Um mapa interativo da região, destinado a empresas e startups, possibilita que todos os moradores da região registrem eventos, seus negócios e locais, criando um ecossistema de colaboração para toda a área em que foi implementado.',
   },
   {
-    Image: images.Satc,
-    title: 'Netflix Clone 4',
+    Icon: FaUserSecret,
+    title: 'Anônimo',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      'Um projeto para a indústria que inclui todos os módulos de cadastro e manipulação complexa de amostras de produtos. Além disso, ele conta com a integração completa com o chão de fábrica e um módulo exclusivo para os contratantes dos serviços da empresa.',
   },
   {
-    Image: images.Satc,
-    title: 'Netflix Clone 5',
+    Icon: FaUserSecret,
+    title: 'Anônimo',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-  },
-  {
-    Image: images.Satc,
-    title: 'Netflix Clone 6',
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      'O principal objetivo é gerenciar edifícios comerciais, com um módulo completo que inclui calendários, notificações e lembretes para que as manutenções cadastradas sejam executadas por um síndico previamente cadastrado como responsável.',
   },
 ];
 
@@ -50,8 +45,8 @@ export const Projects = () => {
       <div className="flex overflow-x-scroll pb-5 gap-10">
         {projectsData.map((project, i) => (
           <ProjectCard
-            key={project.title}
-            image={project.Image}
+            key={project.title + i}
+            Icon={project.Icon}
             description={project.description}
             title={project.title}
             projectNumber={i + 1}

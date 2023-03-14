@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { images } from '../assets';
 
 interface ICard {
   image: any;
@@ -14,7 +13,7 @@ interface ICard {
   summary: string[];
 }
 
-export const Card = ({
+export const ExperiencesCard = ({
   image,
   title,
   icons,
