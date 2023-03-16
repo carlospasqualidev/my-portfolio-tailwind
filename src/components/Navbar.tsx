@@ -41,7 +41,7 @@ export function Navbar() {
   const [urlHash, setUrlHash] = useState('#home');
   //TODO revisar break points
   return (
-    <div className="flex justify-center item h-16 items-center fixed w-full z-50 mt-1">
+    <div className="flex justify-center item h-16 items-center fixed w-full z-50 mt-1 max-md:mt-0">
       <motion.div
         initial={{
           opacity: 0,
