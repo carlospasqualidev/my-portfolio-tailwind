@@ -37,10 +37,6 @@ export const About = () => {
             Icon={FaGithub}
             href="https://github.com/carlospasqualidev"
           />
-          {/* <RedirectButton
-            Icon={FaInstagram}
-            href="https://www.instagram.com/carlos.pasquali.dev/"
-          /> */}
         </div>
       </motion.div>
 

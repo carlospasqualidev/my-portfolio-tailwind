@@ -1,18 +1,19 @@
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import { RedirectButton } from './RedirectButton';
 
 interface IProjectCard {
-  Icon: any;
+  ProjectIcon: any;
   title: string;
   description: string;
+  linkIcons: { href: string; Icon: any }[];
   projectNumber: number;
   totalProjectNumber: number;
 }
 
-//first chilend margin 0 auto
 export const ProjectCard = ({
-  Icon,
+  ProjectIcon,
   title,
+  linkIcons,
   description,
   projectNumber,
   totalProjectNumber,
@@ -41,8 +42,14 @@ export const ProjectCard = ({
           delay: 1,
         }}
         viewport={{ once: true }}
+        className="flex items-center justify-center gap-2 my-[2px] "
       >
-        <Icon size={80} />
+        <ProjectIcon size={80} />
+        <div className="flex flex-col gap-1">
+          {linkIcons.map((icon, i) => (
+            <RedirectButton size={24} Icon={icon.Icon} href={icon.href} />
+          ))}
+        </div>
       </motion.div>
 
       <h1 className="mb-2 text-2xl font-bold max-md:text-xl">
