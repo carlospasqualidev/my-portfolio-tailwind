@@ -47,7 +47,12 @@ export const ProjectCard = ({
         <ProjectIcon size={80} />
         <div className="flex flex-col gap-1">
           {linkIcons.map((icon, i) => (
-            <RedirectButton size={24} Icon={icon.Icon} href={icon.href} />
+            <RedirectButton
+              key={i}
+              size={24}
+              Icon={icon.Icon}
+              href={icon.href}
+            />
           ))}
         </div>
       </motion.div>
