@@ -11,10 +11,29 @@ import {
   FaUsers,
   FaUserSecret,
   FaServer,
+  FaRegWindowRestore,
+  FaExternalLinkAlt,
 } from 'react-icons/fa';
 import { svgs, images } from '../assets/index';
 
 export const projectsData = [
+  {
+    Icon: FaRegWindowRestore,
+    linkIcons: [
+      {
+        href: 'https://ferrari-landing-page.vercel.app/',
+        Icon: FaExternalLinkAlt,
+      },
+      {
+        href: 'https://github.com/carlospasqualidev/ferrari-landing-page-tailwind',
+        Icon: FaGithub,
+      },
+    ],
+    title: 'Landing page - Ferrari',
+    description:
+      'O código foi desenvolvido por mim com next 13 em conjunto com tailwind, já o design foi criado por uma colega, todos os créditos do mesmo estão no rodapé da landing page.',
+  },
+
   {
     Icon: FaServer,
     linkIcons: [
