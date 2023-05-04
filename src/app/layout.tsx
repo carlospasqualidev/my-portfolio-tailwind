@@ -2,7 +2,7 @@ import { Navbar } from '@/components/Navbar';
 import './globals.css';
 import Image from 'next/image';
 import { svgs } from '@/assets';
-import { url } from 'inspector';
+import { NavigateButton } from '@/components/NavigateButtons';
 
 export default function RootLayout({
   children,
@@ -13,6 +13,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body>
+        <NavigateButton />
         <Image
           src={svgs.BackgroundParticles}
           alt=""

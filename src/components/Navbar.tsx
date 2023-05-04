@@ -1,41 +1,7 @@
 'use client';
+import { navbarData } from '@/constants/navbarData';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import {
-  FaHome,
-  FaLaptopCode,
-  FaUserTie,
-  FaClipboardList,
-  FaProjectDiagram,
-} from 'react-icons/fa';
-
-const data = [
-  {
-    Icon: FaHome,
-    href: '#home',
-    delay: 0.5,
-  },
-  {
-    Icon: FaUserTie,
-    href: '#about',
-    delay: 0.75,
-  },
-  {
-    Icon: FaClipboardList,
-    href: '#experiences',
-    delay: 1,
-  },
-  {
-    Icon: FaLaptopCode,
-    href: '#skills',
-    delay: 1.25,
-  },
-  {
-    Icon: FaProjectDiagram,
-    href: '#projects',
-    delay: 1.5,
-  },
-];
 
 export function Navbar() {
   const [urlHash, setUrlHash] = useState('#home');
@@ -54,7 +20,7 @@ export function Navbar() {
         className="w-fit h-full bg-black bg-opacity-80 flex justify-center items-center px-6 rounded-full max-sm:w-full max-sm:rounded-none"
       >
         <ul className="flex gap-8">
-          {data.map((data) => (
+          {navbarData.map((data) => (
             <li
               className={
                 data.href === urlHash
