@@ -29,7 +29,7 @@ export const ProjectCard = ({
       }}
       whileInView={{ opacity: 1, x: 0 }}
       viewport={{ once: true }}
-      className="min-w-[32%] max-md:min-w-[100%] flex flex-col items-center text-center gap-1"
+      className="flex min-w-[32%] flex-col items-center gap-1 text-center max-md:min-w-[100%]"
     >
       <motion.div
         initial={{
@@ -42,7 +42,7 @@ export const ProjectCard = ({
           delay: 1,
         }}
         viewport={{ once: true }}
-        className="flex items-center justify-center gap-2 my-[2px] "
+        className="my-[2px] flex items-center justify-center gap-2 "
       >
         <ProjectIcon size={80} />
         <div className="flex flex-col gap-1">

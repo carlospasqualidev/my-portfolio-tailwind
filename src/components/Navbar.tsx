@@ -1,13 +1,12 @@
 'use client';
+import { IUrl } from '@/app/layout';
+
 import { navbarData } from '@/constants/navbarData';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 
-export function Navbar() {
-  const [urlHash, setUrlHash] = useState('#home');
-  //TODO revisar break points
+export function Navbar({ setUrl, url }: IUrl) {
   return (
-    <div className="flex justify-center item h-16 items-center fixed w-full z-50 mt-1 max-md:mt-0">
+    <div className="item fixed z-50 mt-1 flex h-16 w-full items-center justify-center max-md:mt-0">
       <motion.div
         initial={{
           opacity: 0,
@@ -17,17 +16,17 @@ export function Navbar() {
         transition={{
           duration: 1,
         }}
-        className="w-fit h-full bg-black bg-opacity-80 flex justify-center items-center px-6 rounded-full max-sm:w-full max-sm:rounded-none"
+        className="flex h-full w-fit items-center justify-center rounded-full bg-black bg-opacity-80 px-6 max-sm:w-full max-sm:rounded-none"
       >
         <ul className="flex gap-8">
-          {navbarData.map((data) => (
+          {navbarData.map((data, i) => (
             <li
               className={
-                data.href === urlHash
-                  ? ' scale-125 text-teal-400 transition-all ease-in cursor-pointer'
-                  : '  hover:text-teal-400 transition-all ease-in cursor-pointer hover:scale-125 text-teal-800'
+                data.href === url.hash
+                  ? ' scale-125 cursor-pointer text-teal-400 transition-all ease-in'
+                  : '  cursor-pointer text-teal-800 transition-all ease-in hover:scale-125 hover:text-teal-400'
               }
-              onClick={() => setUrlHash(data.href)}
+              onClick={() => setUrl({ hash: data.href, position: i })}
               key={data.href}
             >
               <motion.a
@@ -40,7 +39,7 @@ export function Navbar() {
                   duration: 1,
                   delay: data.delay,
                 }}
-                className="md:flex max-md:hidden"
+                className="max-md:hidden md:flex"
                 href={data.href}
               >
                 {<data.Icon size={32} />}
@@ -56,7 +55,7 @@ export function Navbar() {
                   duration: 1,
                   delay: data.delay,
                 }}
-                className="md:hidden sm:flex"
+                className="sm:flex md:hidden"
                 href={data.href}
               >
                 {<data.Icon size={28} />}
